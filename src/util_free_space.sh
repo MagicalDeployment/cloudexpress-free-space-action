@@ -21,14 +21,14 @@ set -eux
 
 df -h
 echo "::group::/usr/local/*"
-du -hsc /usr/local/*
+du -hsc /usr/local/* || echo
 echo "::endgroup::"
 # ~1GB
 rm -rf \
   /usr/local/aws-sam-cil \
   /usr/local/julia* || :
 echo "::group::/usr/local/bin/*"
-du -hsc /usr/local/bin/*
+du -hsc /usr/local/bin/* || echo
 echo "::endgroup::"
 # ~1GB (From 1.2GB to 214MB)
 rm -rf \
@@ -50,14 +50,14 @@ rm -rf \
 # 142M
 rm -rf /usr/local/bin/oc || : \
 echo "::group::/usr/local/share/*"
-du -hsc /usr/local/share/*
+du -hsc /usr/local/share/* || echo
 echo "::endgroup::"
 # 506MB
 rm -rf /usr/local/share/chromium || :
 # 1.3GB
 rm -rf /usr/local/share/powershell || :
 echo "::group::/usr/local/lib/*"
-du -hsc /usr/local/lib/*
+du -hsc /usr/local/lib/* || echo
 echo "::endgroup::"
 # 15GB
 rm -rf /usr/local/lib/android || :
@@ -66,17 +66,17 @@ rm -rf /usr/local/lib/heroku || :
 # 1.2GB
 rm -rf /usr/local/lib/node_modules || :
 echo "::group::/opt/*"
-du -hsc /opt/*
+du -hsc /opt/* || echo
 echo "::endgroup::"
 # 679MB
 rm -rf /opt/az || :
 echo "::group::/opt/microsoft/*"
-du -hsc /opt/microsoft/*
+du -hsc /opt/microsoft/* || echo
 echo "::endgroup::"
 # 197MB
 rm -rf /opt/microsoft/powershell || :
 echo "::group::/opt/hostedtoolcache/*"
-du -hsc /opt/hostedtoolcache/*
+du -hsc /opt/hostedtoolcache/* || echo
 echo "::endgroup::"
 # 5.3GB
 rm -rf /opt/hostedtoolcache/CodeQL || :
