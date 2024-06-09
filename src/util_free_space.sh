@@ -24,14 +24,14 @@ echo "::group::/usr/local/*"
 du -hsc /usr/local/*
 echo "::endgroup::"
 # ~1GB
-sudo rm -rf \
+rm -rf \
   /usr/local/aws-sam-cil \
   /usr/local/julia* || :
 echo "::group::/usr/local/bin/*"
 du -hsc /usr/local/bin/*
 echo "::endgroup::"
 # ~1GB (From 1.2GB to 214MB)
-sudo rm -rf \
+rm -rf \
   /usr/local/bin/aliyun \
   /usr/local/bin/azcopy \
   /usr/local/bin/bicep \
@@ -48,46 +48,46 @@ sudo rm -rf \
   /usr/local/bin/stack \
   /usr/local/bin/terraform || :
 # 142M
-sudo rm -rf /usr/local/bin/oc || : \
+rm -rf /usr/local/bin/oc || : \
 echo "::group::/usr/local/share/*"
 du -hsc /usr/local/share/*
 echo "::endgroup::"
 # 506MB
-sudo rm -rf /usr/local/share/chromium || :
+rm -rf /usr/local/share/chromium || :
 # 1.3GB
-sudo rm -rf /usr/local/share/powershell || :
+rm -rf /usr/local/share/powershell || :
 echo "::group::/usr/local/lib/*"
 du -hsc /usr/local/lib/*
 echo "::endgroup::"
 # 15GB
-sudo rm -rf /usr/local/lib/android || :
+rm -rf /usr/local/lib/android || :
 # 341MB
-sudo rm -rf /usr/local/lib/heroku || :
+rm -rf /usr/local/lib/heroku || :
 # 1.2GB
-sudo rm -rf /usr/local/lib/node_modules || :
+rm -rf /usr/local/lib/node_modules || :
 echo "::group::/opt/*"
 du -hsc /opt/*
 echo "::endgroup::"
 # 679MB
-sudo rm -rf /opt/az || :
+rm -rf /opt/az || :
 echo "::group::/opt/microsoft/*"
 du -hsc /opt/microsoft/*
 echo "::endgroup::"
 # 197MB
-sudo rm -rf /opt/microsoft/powershell || :
+rm -rf /opt/microsoft/powershell || :
 echo "::group::/opt/hostedtoolcache/*"
 du -hsc /opt/hostedtoolcache/*
 echo "::endgroup::"
 # 5.3GB
-sudo rm -rf /opt/hostedtoolcache/CodeQL || :
+rm -rf /opt/hostedtoolcache/CodeQL || :
 # 1.4GB
-sudo rm -rf /opt/hostedtoolcache/go || :
+rm -rf /opt/hostedtoolcache/go || :
 # 489MB
-sudo rm -rf /opt/hostedtoolcache/PyPy || :
+rm -rf /opt/hostedtoolcache/PyPy || :
 # 376MB
-sudo rm -rf /opt/hostedtoolcache/node || :
+rm -rf /opt/hostedtoolcache/node || :
 # Remove Web browser packages
-sudo apt purge -y \
+apt purge -y \
   firefox \
   google-chrome-stable \
   microsoft-edge-stable
