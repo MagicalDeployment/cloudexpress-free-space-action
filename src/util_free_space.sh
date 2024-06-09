@@ -90,5 +90,5 @@ rm -rf /opt/hostedtoolcache/node || :
 apt purge -y \
   firefox \
   google-chrome-stable \
-  microsoft-edge-stable
+  microsoft-edge-stable || echo
 df -h
